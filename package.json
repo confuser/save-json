@@ -1,0 +1,45 @@
+{
+  "name": "save-json",
+  "version": "0.1.0",
+  "description": "json file persistance engine for save",
+  "main": "json-engine.js",
+  "directories": {
+    "test": "test"
+  },
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org"
+  },
+  "scripts": {
+    "lint": "./node_modules/.bin/jshint .",
+    "pretest": "npm run-script lint",
+    "test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --recursive -R spec",
+    "posttest": "./node_modules/.bin/istanbul check-coverage && rm -rf coverage",
+    "prepublish": "npm test && npm prune"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:confuser/validity-url-optional-tlds"
+  },
+  "keywords": [
+    "validity",
+    "validation",
+    "url",
+    "tlds"
+  ],
+  "author": "James Mortemore <jamesmortemore@gmail.com>",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/confuser/validity-url-optional-tlds/issues"
+  },
+  "devDependencies": {
+    "mocha": "~1.13.0",
+    "istanbul": "~0.1.44",
+    "async": "~0.2.9",
+    "should": "2",
+    "jshint": "~2.3.0",
+    "save": ">=0.0.14"
+  },
+  "dependencies": {
+    "lodash": "~2.2.1"
+  }
+}
