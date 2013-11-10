@@ -10,8 +10,6 @@ JSON based file persistance engine for [save](https://npmjs.org/package/save) us
 
 ## Usage
 
-Below is a simple example for usage with schemata:
-
 ```js
 var save = require('save') // npm install save
   , saveJson = require('..')
