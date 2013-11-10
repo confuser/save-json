@@ -27,7 +27,7 @@ contactStore.create({ name: 'James', email: 'jamesmortemore@gmail.com'}, functio
   // The created 'contact' is returned and has been given an id
   console.log(contact)
   
-  // Now check the contenets of contact.json... magic!
+  // Now check the contents of contact.json... magic!
 })
 
 // Lets find that object with a lodash _.where style query. Simple!
