@@ -18,18 +18,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:confuser/validity-url-optional-tlds"
+    "url": "git@github.com:confuser/save-json"
   },
   "keywords": [
-    "validity",
-    "validation",
-    "url",
-    "tlds"
+    "save",
+    "json",
+    "file",
+    "persistance"
   ],
   "author": "James Mortemore <jamesmortemore@gmail.com>",
   "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/confuser/validity-url-optional-tlds/issues"
+    "url": "https://github.com/confuser/save-json/issues"
   },
   "devDependencies": {
     "mocha": "~1.13.0",
