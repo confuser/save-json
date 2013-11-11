@@ -127,6 +127,20 @@ describe('#find', function () {
       done()
     })
   })
+
+  it('should find all objects', function (done) {
+    save.find({}, function (error, objects) {
+      should.not.exist(error)
+
+      objects.length.should.equal(2)
+
+      _.each(objects, function (object) {
+        object.foo.should.equal('bar')
+      })
+
+      done()
+    })
+  })
 })
 
 describe('#findOne', function () {

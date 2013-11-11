@@ -204,6 +204,8 @@ module.exports = function (file, engineOptions) {
     }
     self.emit('find', query)
 
+    if (Object.keys(query).length === 0) return callback(null, _.clone(data))
+
     var foundData = _.where(data, query)
 
     if (!foundData || !foundData.length) return callback(new Error('No objects found'))
