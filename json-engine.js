@@ -33,7 +33,7 @@ module.exports = function (file, engineOptions) {
   // Handle id increment
   function getNextId() {
     var dataIds = Object.keys(idIndexData)
-  
+
     dataIds.sort(function (a, b) {
       return b - a
     })
@@ -137,6 +137,11 @@ module.exports = function (file, engineOptions) {
     var updateData = overwrite ? updateObject : _.extend(idIndexData[id], updateObject)
     idIndexData[id] = updateData
 
+    // update our data
+    var find = {}
+    find[options.idProperty] = id
+    data.splice(_.findIndex(data, find), 1, updateData);
+
     saveFile('afterUpdate', updateData, callback)
   }
 
@@ -215,7 +220,7 @@ module.exports = function (file, engineOptions) {
 
   function count(query, callback) {
     self.emit('count', query)
-    
+
     self.find(query, function (error, objects) {
       callback(null, objects ? objects.length : 0)
     })
